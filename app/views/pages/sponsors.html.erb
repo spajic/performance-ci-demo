@@ -1,0 +1,45 @@
+<% title "#{ApplicationConfig['COMMUNITY_NAME']} Sponsors" %>
+
+<%= content_for :page_meta do %>
+  <link rel="canonical" href="https://dev.to/sponsors" />
+  <meta name="description" content="dev.to | Sponsors">
+  <meta name="keywords" content="software development,engineering,rails,javascript,ruby">
+
+<% end %>
+
+<div class="blank-space"></div>
+
+<style>
+  .container .body h4 img {
+    top: 10px;
+    display: inline;
+    left: 0;
+  }
+</style>
+
+<div class="container article">
+  <div class="title" style="height:20px;">
+  </div>
+  <div class="body" style="text-align:center;">
+    <h1 style="font-size:3em;font-weight:600;margin-bottom:5px;">
+      THANK YOU
+    </h1>
+    <p style="margin:5px 5px;"><em>for supporting our community</em></p>
+
+    <h4>
+      <img src="<%= cloudinary("https://thepracticaldev.s3.amazonaws.com/i/2zmukvll98je8qsdyewq.png", 30) %>"><span style="background-color: #fefa87; padding:3px;">Gold Sponsors</span><img src="<%= cloudinary("https://thepracticaldev.s3.amazonaws.com/i/2zmukvll98je8qsdyewq.png", 30) %>">
+    </h4>
+    <div id="gold-sponsors">
+      <% Organization.where(is_gold_sponsor: true).order("sponsorship_featured_number ASC").each do |organization| %>
+        <a href="<%= organization.sponsorship_url %>"><img src="<%= cloudinary(organization.nav_image_url, 250) %>"></a>
+
+        <p>
+          <%= organization.sponsorship_blurb_html.html_safe %>
+        </p>
+
+        <hr />
+      <% end %>
+    </div>
+    <h5> Interested in sponsoring dev.to? Email <a href="mailto:peter@dev.to">peter@dev.to</a></h5>
+  </div>
+</div>
