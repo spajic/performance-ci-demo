@@ -1,0 +1,8 @@
+language: ruby
+sudo: required
+
+services:
+  - docker
+
+script:
+- docker run --privileged -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io --budget /sitespeed.io/budget.json https://dev.to
