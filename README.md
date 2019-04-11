@@ -1,4 +1,5 @@
-1
+[![Build Status](https://travis-ci.com/spajic/performance-ci-demo.svg?branch=master)](https://travis-ci.com/spajic/performance-ci-demo)
+
 <div align="center">
   <br>
   <img
