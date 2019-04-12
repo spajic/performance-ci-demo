@@ -8,4 +8,4 @@ services:
   - docker
 
 script:
-- docker run --privileged -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io --budget /sitespeed.io/budget.json https://dev.to
+- docker run --privileged -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io --budget.configPath /sitespeed.io/budget.json https://dev.to
