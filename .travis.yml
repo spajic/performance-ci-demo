@@ -11,4 +11,4 @@ script:
 - docker run --privileged -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io --budget.configPath /sitespeed.io/budget.json -n 1 https://dev.to
 
 after_success:
-  - yarn run lh -- https://dev.to
+  - yarn run lh -- --perf=90 https://dev.to
