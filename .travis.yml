@@ -12,4 +12,4 @@ script:
 # - yarn run size
 
 after_success:
-  - yarn run lh -- --perf=90 https://dev.to
+  - yarn run lh -- --perf=100 https://dev.to
