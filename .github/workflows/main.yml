@@ -8,6 +8,7 @@ jobs:
     
     steps:
     - name: run sitespeedio test
+      uses: actions/checkout@v1
       uses: docker://sitespeedio/sitespeed.io:9.8.1-action
       with:
         args: https://dev.to -n 1 --budget.configPath /github/workspace/budget.json 
