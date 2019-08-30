@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: run sitespeedio test
+    - name: checkout code
       uses: actions/checkout@v1
+    - name: run sitespeedio test
       uses: docker://sitespeedio/sitespeed.io:9.8.1-action
       with:
         args: https://dev.to -n 1 --budget.configPath /github/workspace/budget.json 
