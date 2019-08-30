@@ -10,4 +10,4 @@ jobs:
     - name: run sitespeedio test
       uses: docker://sitespeedio/sitespeed.io:9.8.1-action
       with:
-        args: https://dev.to -n 1 --budget.configPath budget.json
+        args: https://dev.to -n 1 --budget.configPath /github/workspace/.github/budget.json
