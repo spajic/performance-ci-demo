@@ -97,7 +97,7 @@
     "@size-limit/webpack": "^2.1.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-preact": "^1.1.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "codemirror": "^5.45.0",
     "intersection-observer": "^0.5.1",
     "linkstate": "^1.1.1",
