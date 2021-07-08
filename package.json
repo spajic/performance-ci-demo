@@ -20,7 +20,7 @@
     {
       "path": "public/packs/*.js",
       "webpack": false,
-      "limit": "3000 KB"
+      "limit": "1000 KB"
     }
   ],
   "lint-staged": {
